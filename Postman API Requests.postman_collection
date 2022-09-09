@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "9a138630-76a4-439a-b3ab-e149c5b0b234",
+		"name": "Postman API Requests Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PUT Request Salida Automovil",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/salida/def123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"salida",
+						"def123"
+					]
+				},
+				"description": "Request que actualiza la información de un vehículo cuando sale del estacionamiento, devolviendo además el monto a cobrar"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Request Salida Automovil Error",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/salida/abc457",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"salida",
+						"abc457"
+					]
+				},
+				"description": "Puesto que la placa introducida no coincide con ningún vehículo parqueado, se envia un mensaje de alerta"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Request Ingreso Automovil",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/ingreso/was123/bicicleta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"ingreso",
+						"was123",
+						"bicicleta"
+					]
+				},
+				"description": "Permite el registro de un nuevo vehiculo, notese que los valores introducidos son placa y tipo en minúscula (bicicleta)"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Consulta 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/consulta1/2022-09-09/2022-09-10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"consulta1",
+						"2022-09-09",
+						"2022-09-10"
+					]
+				},
+				"description": "Devuelve un JSON con los totales de autos y dinero recaudado en cierto intervalo de tiempo. Se ingresan una fecha de inicio, seguida de una fecha de final. Ambas fechas se introducen en formato YYYY-MM-DD"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Consulta 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/consulta2/2022-09-09/2022-09-11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"consulta2",
+						"2022-09-09",
+						"2022-09-11"
+					]
+				},
+				"description": "Devuelve un JSON con la información de todos los autos que entraron y salieron dentro de cierto intervalo de tiempo. Se ingresan una fecha de inicio, seguida de una fecha de final. Ambas fechas se introducen en formato YYYY-MM-DD"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Consulta 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/consulta3/moto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"consulta3",
+						"moto"
+					]
+				},
+				"description": "Devuelve un JSON con la información de totales de los vehiculos de tipo moto"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Consulta 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/consulta4/automovil",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"consulta4",
+						"automovil"
+					]
+				},
+				"description": "Devuelve un JSON con toda la información de los vehiculos de tipo automovil"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Consulta 1 Error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/consulta1/2022-09-09/2022-09-09",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"consulta1",
+						"2022-09-09",
+						"2022-09-09"
+					]
+				},
+				"description": "Devuelve un JSON con los totales de autos y dinero recaudado en cierto intervalo de tiempo. Puesto que las fechas de inicio y final son iguales, el intervalo de tiempo es 0 y por tanto no devuelve información relevante"
+			},
+			"response": []
+		}
+	]
+}
